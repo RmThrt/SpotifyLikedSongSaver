@@ -3,18 +3,14 @@ var request = require('request'); // "Request" library
 var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
-var util = require('util');
 const yaml = require('js-yaml');
 const fs = require('fs');
 const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
-const assert = require('assert').assert;
-const ajax = require('ajax').ajax;
-const _ = require('lodash');
-const path = require('path');
+
 
 function readConfigFile(filename) {
   try {
-    const doc = yaml.safeLoad(fs.readFileSync(filename, 'utf8'));
+    const doc = yaml.load(fs.readFileSync(filename, 'utf8'));
     return doc;
   } catch (e) {
     console.log(e);
