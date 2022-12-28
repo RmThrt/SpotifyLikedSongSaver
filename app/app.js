@@ -161,7 +161,7 @@ async function mainScript() {
 
   const currentDate = new Date(Date.now());
 
-  await exportCsvBackup(Object.keys(savedSongs[0]), savedSongs, ',', __dirname + '/SavedSongs_' + currentDate.getFullYear() + '_' + (currentDate.getMonth() + 1).toString() + '_' + currentDate.getDate().toString() + '.csv');
+  await exportCsvBackup(Object.keys(savedSongs[0]), savedSongs, ',', __dirname + '/csvBackup/SavedSongs_' + currentDate.getFullYear() + '_' + (currentDate.getMonth() + 1).toString() + '_' + currentDate.getDate().toString() + '.csv');
 
   const playlistSongsSorted = playlistSongs.sort(sortByProperty('name')).map(item => ({ addedDate: item.addedDate, json: JSON.stringify({ name: item.name, artist: item.artist, uri: item.uri, id: item.id }) }));
   const savedSongsSorted = savedSongs.sort(sortByProperty('name')).map(item => ({ addedDate: item.addedDate, json: JSON.stringify({ name: item.name, artist: item.artist, uri: item.uri, id: item.id }) }));
