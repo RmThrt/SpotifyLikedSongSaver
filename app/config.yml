@@ -1,0 +1,3 @@
+client_id: ffe90df6bd284d7e86ddd8553b322d9c
+client_secret: 90ef0e56d46548779b4b2a7eade85cb2
+redirect_uri: http://localhost:8888/callback
